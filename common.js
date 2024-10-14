@@ -1,7 +1,6 @@
 import Tabular from 'meteor/aldeed:tabular';
-Books = new Mongo.Collection('Books');
+global.Books = new Mongo.Collection('Books');
 export default function() {
-        console.log('createTable is running ...')
         new Tabular.Table({
             name: "Books",
             collection: Books,
@@ -10,6 +9,11 @@ export default function() {
                 {data: "author", title: "Author"},
                 {data: "copies", title: "Copies Available"},
             ],
-            //buttons: ['copy', 'excel', 'csv'],
-    });
+            buttons: [
+                'copy', 'csvHtml5', 'excelHtml5', 'pdfHtml5'
+            ],
+            layout: {
+                topStart: 'buttons',
+            }
+    })
 }
