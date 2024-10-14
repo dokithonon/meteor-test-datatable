@@ -1,6 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import createTable from  '../common.js';
-createTable();
+import '../common.js';
 
 Meteor.startup(async function() {
   await Books.removeAsync({});

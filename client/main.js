@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 import Tabular from 'meteor/aldeed:tabular';
-import createTable from  '../common.js';
+import '../common.js';
 import './main.html';
 
 // initialize DataTables before anything else
@@ -16,7 +16,7 @@ import 'datatables.net-buttons/js/buttons.print';
 
 // init Tabular
 Tabular.init({ DataTable })
-createTable()
+
 
 Template.hello.onCreated(function helloOnCreated() {
 
