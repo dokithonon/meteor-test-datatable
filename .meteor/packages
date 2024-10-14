@@ -17,4 +17,4 @@ es5-shim
 ecmascript
 typescript
 shell-server
-aldeed:tabular
+aldeed:tabular@3.0.0-rc.4

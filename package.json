@@ -10,7 +10,6 @@
   "dependencies": {
     "@babel/runtime": "^7.17.9",
     "datatables.net-bs": "^2.1.8",
-    "datatables.net-bs5": "^2.1.8",
     "datatables.net-buttons": "^3.1.2",
     "datatables.net-buttons-bs": "^3.1.2",
     "jquery": "^3.6.0",
@@ -20,6 +19,26 @@
     "mainModule": {
       "client": "client/main.js",
       "server": "server/main.js"
+    },
+    "nodeModules": {
+      "recompile": {
+        "datatables.net": [
+          "client",
+          "legacy"
+        ],
+        "datatables.net-bs": [
+          "client",
+          "legacy"
+        ],
+        "datatables.net-buttons": [
+          "client",
+          "legacy"
+        ],
+        "datatables.net-buttons-bs": [
+          "client",
+          "legacy"
+        ]
+      }
     },
     "testModule": "tests/main.js"
   }

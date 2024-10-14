@@ -1,30 +1,28 @@
 import { Template } from 'meteor/templating';
-import Tabular from 'meteor/aldeed:tabular';
-global.Tabular = Tabular; // To make it available in the chrome console
+
+
 
 
 import createTable from  '../common.js';
 import './main.html';
 
-import { $ } from 'meteor/jquery';
+
+import Tabular from 'meteor/aldeed:tabular'
+global.Tabular = Tabular; // To make it available in the chrome console
 
 // Bootstrap Theme
-import dataTablesBootstrap from 'datatables.net-bs';
+import DataTables from  'datatables.net-bs';
 import 'datatables.net-bs/css/dataTables.bootstrap.css';
 
 // Buttons Core
-//import dataTableButtons from 'datatables.net-buttons-bs';
-
+import 'datatables.net-buttons-bs';
 // Import whichever buttons you are using
-//import html5ExportButtons from 'datatables.net-buttons/js/buttons.html5.js';
+import 'datatables.net-buttons/js/buttons.colVis.js';
+import 'datatables.net-buttons/js/buttons.html5.js';
+import 'datatables.net-buttons/js/buttons.print.js';
 
-// Then initialize everything you imported
-//dataTablesBootstrap(window, $);
-//dataTableButtons(window, $);
-//html5ExportButtons(window, $);
+Tabular.init({ DataTables }) // pass DT constructor
 
-
-Tabular.init();
 createTable();
 
 
