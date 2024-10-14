@@ -17,4 +17,4 @@ es5-shim@4.8.1
 ecmascript@0.16.9
 typescript@5.4.3
 shell-server@0.6.0
-aldeed:tabular
+aldeed:tabular@3.0.0-rc.4

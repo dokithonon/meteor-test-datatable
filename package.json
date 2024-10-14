@@ -10,28 +10,36 @@
   "dependencies": {
     "@babel/runtime": "^7.17.9",
     "datatables.net-bs": "^2.1.8",
-    "datatables.net-bs5": "^2.1.8",
     "datatables.net-buttons": "^3.1.2",
     "datatables.net-buttons-bs": "^3.1.2",
-
+    "jquery": "^3.7.1",
     "meteor-node-stubs": "^1.2.1"
-  },
-  "peerDependencies": {
-    "jquery": "^3.7.1"
   },
   "meteor": {
     "mainModule": {
       "client": "client/main.js",
       "server": "server/main.js"
     },
-    "testModule": "tests/main.js",
     "nodeModules": {
       "recompile": {
-        "datatables.net": ["client", "legacy"],
-        "datatables.net-bs": ["client", "legacy"],
-        "datatables.net-buttons": ["client", "legacy"],
-        "datatables.net-buttons-bs": ["client", "legacy"]
+        "datatables.net": [
+          "client",
+          "legacy"
+        ],
+        "datatables.net-bs": [
+          "client",
+          "legacy"
+        ],
+        "datatables.net-buttons": [
+          "client",
+          "legacy"
+        ],
+        "datatables.net-buttons-bs": [
+          "client",
+          "legacy"
+        ]
       }
-    }
+    },
+    "testModule": "tests/main.js"
   }
 }
