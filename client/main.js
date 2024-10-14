@@ -1,5 +1,8 @@
 import { Template } from 'meteor/templating';
 import Tabular from 'meteor/aldeed:tabular';
+global.Tabular = Tabular; // To make it available in the chrome console
+
+
 import createTable from  '../common.js';
 import './main.html';
 
@@ -16,7 +19,7 @@ import 'datatables.net-bs/css/dataTables.bootstrap.css';
 //import html5ExportButtons from 'datatables.net-buttons/js/buttons.html5.js';
 
 // Then initialize everything you imported
-dataTablesBootstrap(window, $);
+//dataTablesBootstrap(window, $);
 //dataTableButtons(window, $);
 //html5ExportButtons(window, $);
 
